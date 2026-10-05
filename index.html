@@ -46,12 +46,11 @@
 
     :root {
       --negro: #111111;
-      --negro-claro: #1b1b1b;
-      --dorado: #d8ae3d;
-      --dorado-claro: #f0cf6a;
-      --crema: #f4efe3;
-      --blanco: #fffdf8;
-      --gris: #77736b;
+      --gris-oscuro: #2b2b2b;
+      --gris: #6d6d6d;
+      --gris-claro: #e7e7e7;
+      --fondo: #f5f5f5;
+      --blanco: #ffffff;
     }
 
     html {
@@ -61,7 +60,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--crema);
+      background: var(--fondo);
       color: var(--negro);
     }
 
@@ -69,17 +68,15 @@
       color: inherit;
     }
 
-    /* BARRA SUPERIOR */
-
     nav {
       background: var(--negro);
-      border-bottom: 4px solid var(--dorado);
+      border-bottom: 1px solid #333;
     }
 
     .nav-contenido {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 13px 20px;
+      padding: 14px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -87,7 +84,7 @@
     }
 
     .marca {
-      color: var(--dorado-claro);
+      color: white;
       font-weight: 900;
       text-decoration: none;
       text-transform: uppercase;
@@ -97,12 +94,12 @@
     .nav-enlaces {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 6px;
       justify-content: flex-end;
     }
 
     .nav-enlaces a {
-      color: white;
+      color: #e8e8e8;
       text-decoration: none;
       font-size: 14px;
       font-weight: bold;
@@ -111,48 +108,40 @@
     }
 
     .nav-enlaces a:hover {
-      background: var(--dorado);
+      background: white;
       color: var(--negro);
     }
 
-    /* HERO */
-
     .hero {
-      background:
-        linear-gradient(
-          rgba(10, 10, 10, 0.92),
-          rgba(10, 10, 10, 0.97)
-        );
-      color: white;
+      background: white;
       text-align: center;
-      padding: 65px 20px 80px;
-      border-bottom: 8px solid var(--dorado);
+      padding: 70px 20px 80px;
+      border-bottom: 4px solid var(--negro);
     }
 
     .logo {
-      width: 260px;
+      width: 255px;
       max-width: 70vw;
       height: auto;
-      margin-bottom: 22px;
-      filter: drop-shadow(0 0 18px rgba(216, 174, 61, 0.25));
+      margin-bottom: 24px;
+      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
     }
 
     .sello {
       display: inline-block;
-      border: 2px solid var(--dorado);
-      color: var(--dorado-claro);
+      border: 2px solid var(--negro);
       padding: 7px 14px;
+      margin-bottom: 18px;
       font-size: 13px;
       font-weight: 900;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 20px;
     }
 
     h1 {
       margin: 0;
       font-size: clamp(48px, 9vw, 92px);
-      line-height: 0.9;
+      line-height: 0.92;
       text-transform: uppercase;
       letter-spacing: -3px;
     }
@@ -162,15 +151,15 @@
       margin: 26px auto 0;
       font-size: 20px;
       line-height: 1.6;
-      color: #dddddd;
+      color: #555;
     }
 
     .hero-frase {
-      margin: 23px auto 0;
-      color: var(--dorado-claro);
+      margin-top: 22px;
       font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
+      color: var(--gris-oscuro);
     }
 
     .hero-botones {
@@ -187,29 +176,26 @@
       text-decoration: none;
       font-weight: 900;
       text-transform: uppercase;
-      border: 2px solid var(--dorado);
-    }
-
-    .boton-dorado {
-      background: var(--dorado);
-      color: var(--negro);
-    }
-
-    .boton-dorado:hover {
-      background: var(--dorado-claro);
+      border: 2px solid var(--negro);
     }
 
     .boton-negro {
+      background: var(--negro);
       color: white;
-      background: transparent;
     }
 
     .boton-negro:hover {
-      background: var(--dorado);
+      background: #333;
+    }
+
+    .boton-blanco {
+      background: white;
       color: var(--negro);
     }
 
-    /* CONTENIDO */
+    .boton-blanco:hover {
+      background: #ededed;
+    }
 
     main {
       max-width: 1150px;
@@ -218,12 +204,12 @@
     }
 
     .documento {
-      background: var(--blanco);
+      background: white;
       border: 3px solid var(--negro);
-      box-shadow: 8px 8px 0 var(--dorado);
       padding: 38px;
       margin-bottom: 55px;
       position: relative;
+      box-shadow: 8px 8px 0 #d6d6d6;
     }
 
     .documento::before {
@@ -232,7 +218,7 @@
       top: -16px;
       left: 25px;
       background: var(--negro);
-      color: var(--dorado-claro);
+      color: white;
       padding: 7px 12px;
       font-size: 12px;
       font-weight: 900;
@@ -266,7 +252,7 @@
     }
 
     .tarjeta {
-      background: var(--blanco);
+      background: white;
       border: 3px solid var(--negro);
       padding: 28px;
       min-height: 225px;
@@ -278,11 +264,11 @@
 
     .tarjeta:hover {
       transform: translate(-3px, -3px);
-      box-shadow: 7px 7px 0 var(--dorado);
+      box-shadow: 7px 7px 0 #cfcfcf;
     }
 
     .numero {
-      color: var(--dorado);
+      color: var(--gris);
       font-size: 14px;
       font-weight: 900;
       letter-spacing: 2px;
@@ -308,16 +294,14 @@
     }
 
     .tarjeta a:hover {
-      color: #9c7416;
+      text-decoration: underline;
     }
-
-    /* YOUTUBE */
 
     .youtube {
       margin-top: 50px;
       background: var(--negro);
       color: white;
-      border: 5px solid var(--dorado);
+      border: 3px solid var(--negro);
       padding: 40px;
       display: flex;
       justify-content: space-between;
@@ -327,29 +311,26 @@
 
     .youtube h2 {
       margin: 0 0 10px;
-      color: var(--dorado-claro);
       font-size: 31px;
       text-transform: uppercase;
     }
 
     .youtube p {
       margin: 0;
-      color: #dddddd;
+      color: #d8d8d8;
       line-height: 1.6;
     }
 
-    /* PIE */
-
     footer {
-      background: var(--negro);
-      color: #aaaaaa;
+      background: white;
+      border-top: 3px solid var(--negro);
+      color: #666;
       text-align: center;
       padding: 35px 20px;
-      border-top: 5px solid var(--dorado);
     }
 
     .footer-nombre {
-      color: var(--dorado-claro);
+      color: var(--negro);
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -376,7 +357,7 @@
 
     @media (max-width: 520px) {
       .hero {
-        padding-top: 45px;
+        padding-top: 48px;
       }
 
       h1 {
@@ -385,7 +366,7 @@
 
       .documento {
         padding: 30px 22px;
-        box-shadow: 5px 5px 0 var(--dorado);
+        box-shadow: 5px 5px 0 #d6d6d6;
       }
 
       .seccion-titulo {
@@ -457,7 +438,7 @@
 
       <a
         href="episodios/"
-        class="boton boton-dorado"
+        class="boton boton-negro"
       >
         Ver episodios
       </a>
@@ -466,7 +447,7 @@
         href="https://www.youtube.com/@Asociacioncapipana"
         target="_blank"
         rel="noopener noreferrer"
-        class="boton boton-negro"
+        class="boton boton-blanco"
       >
         Canal oficial
       </a>
@@ -632,7 +613,7 @@
         href="https://www.youtube.com/@Asociacioncapipana"
         target="_blank"
         rel="noopener noreferrer"
-        class="boton boton-dorado"
+        class="boton boton-blanco"
       >
         Ir a YouTube →
       </a>
