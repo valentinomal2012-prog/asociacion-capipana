@@ -44,6 +44,16 @@
       box-sizing: border-box;
     }
 
+    :root {
+      --negro: #111111;
+      --negro-claro: #1b1b1b;
+      --dorado: #d8ae3d;
+      --dorado-claro: #f0cf6a;
+      --crema: #f4efe3;
+      --blanco: #fffdf8;
+      --gris: #77736b;
+    }
+
     html {
       scroll-behavior: smooth;
     }
@@ -51,270 +61,298 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top, #ffffff 0%, #f4f4f4 45%, #ededed 100%);
-      color: #202020;
+      background: var(--crema);
+      color: var(--negro);
     }
 
     a {
       color: inherit;
     }
 
+    /* BARRA SUPERIOR */
+
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(20, 20, 20, 0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #333;
+      background: var(--negro);
+      border-bottom: 4px solid var(--dorado);
     }
 
     .nav-contenido {
-      max-width: 1180px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 14px 20px;
+      padding: 13px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
-    .nav-marca {
-      color: white;
-      font-weight: bold;
+    .marca {
+      color: var(--dorado-claro);
+      font-weight: 900;
       text-decoration: none;
-      font-size: 18px;
-      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .nav-enlaces {
       display: flex;
       flex-wrap: wrap;
+      gap: 5px;
       justify-content: flex-end;
-      gap: 8px;
     }
 
     .nav-enlaces a {
-      color: #e9e9e9;
+      color: white;
       text-decoration: none;
       font-size: 14px;
+      font-weight: bold;
       padding: 8px 10px;
-      border-radius: 8px;
-      transition: 0.2s;
+      text-transform: uppercase;
     }
 
     .nav-enlaces a:hover {
-      background: #333;
-      color: white;
+      background: var(--dorado);
+      color: var(--negro);
     }
+
+    /* HERO */
 
     .hero {
-      min-height: 620px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 70px 20px;
-      text-align: center;
       background:
         linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.96),
-          rgba(245, 245, 245, 0.96)
+          rgba(10, 10, 10, 0.92),
+          rgba(10, 10, 10, 0.97)
         );
-      border-bottom: 1px solid #ddd;
-    }
-
-    .hero-contenido {
-      max-width: 900px;
-      margin: 0 auto;
+      color: white;
+      text-align: center;
+      padding: 65px 20px 80px;
+      border-bottom: 8px solid var(--dorado);
     }
 
     .logo {
-      width: 245px;
+      width: 260px;
       max-width: 70vw;
       height: auto;
-      display: block;
-      margin: 0 auto 28px;
-      filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
+      margin-bottom: 22px;
+      filter: drop-shadow(0 0 18px rgba(216, 174, 61, 0.25));
     }
 
-    .etiqueta {
+    .sello {
       display: inline-block;
-      margin-bottom: 16px;
-      padding: 7px 13px;
-      border: 1px solid #d0d0d0;
-      border-radius: 999px;
-      background: white;
-      color: #555;
+      border: 2px solid var(--dorado);
+      color: var(--dorado-claro);
+      padding: 7px 14px;
       font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 0.4px;
+      font-weight: 900;
+      letter-spacing: 2px;
       text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(44px, 8vw, 78px);
-      letter-spacing: -2px;
-      line-height: 0.98;
+      font-size: clamp(48px, 9vw, 92px);
+      line-height: 0.9;
+      text-transform: uppercase;
+      letter-spacing: -3px;
     }
 
-    .subtitulo {
+    .hero-subtitulo {
       max-width: 760px;
-      margin: 24px auto 0;
-      color: #555;
+      margin: 26px auto 0;
       font-size: 20px;
       line-height: 1.6;
+      color: #dddddd;
+    }
+
+    .hero-frase {
+      margin: 23px auto 0;
+      color: var(--dorado-claro);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .hero-botones {
-      margin-top: 32px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 12px;
+      margin-top: 32px;
     }
 
     .boton {
       display: inline-block;
       padding: 14px 20px;
-      border-radius: 10px;
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s;
+      font-weight: 900;
+      text-transform: uppercase;
+      border: 2px solid var(--dorado);
     }
 
-    .boton-principal {
-      background: #202020;
+    .boton-dorado {
+      background: var(--dorado);
+      color: var(--negro);
+    }
+
+    .boton-dorado:hover {
+      background: var(--dorado-claro);
+    }
+
+    .boton-negro {
       color: white;
+      background: transparent;
     }
 
-    .boton-principal:hover {
-      background: #000;
-      transform: translateY(-2px);
+    .boton-negro:hover {
+      background: var(--dorado);
+      color: var(--negro);
     }
 
-    .boton-secundario {
-      background: white;
-      color: #202020;
-      border: 1px solid #ccc;
-    }
-
-    .boton-secundario:hover {
-      border-color: #888;
-      transform: translateY(-2px);
-    }
+    /* CONTENIDO */
 
     main {
-      max-width: 1180px;
+      max-width: 1150px;
       margin: 0 auto;
-      padding: 55px 20px 70px;
+      padding: 55px 20px 75px;
     }
 
-    .introduccion {
-      background: #202020;
-      color: white;
-      border-radius: 18px;
-      padding: 42px;
-      margin-bottom: 38px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    .documento {
+      background: var(--blanco);
+      border: 3px solid var(--negro);
+      box-shadow: 8px 8px 0 var(--dorado);
+      padding: 38px;
+      margin-bottom: 55px;
+      position: relative;
     }
 
-    .introduccion h2 {
-      margin-top: 0;
+    .documento::before {
+      content: "DOCUMENTO INSTITUCIONAL";
+      position: absolute;
+      top: -16px;
+      left: 25px;
+      background: var(--negro);
+      color: var(--dorado-claro);
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .documento h2 {
+      margin-top: 5px;
       font-size: 34px;
+      text-transform: uppercase;
     }
 
-    .introduccion p {
-      max-width: 850px;
-      color: #dedede;
+    .documento p {
       font-size: 18px;
       line-height: 1.7;
+      max-width: 900px;
     }
 
-    .titulo-seccion {
-      margin: 0 0 24px;
+    .seccion-titulo {
+      border-bottom: 5px solid var(--negro);
+      padding-bottom: 10px;
+      margin-bottom: 25px;
       font-size: 34px;
+      text-transform: uppercase;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+      gap: 20px;
     }
 
     .tarjeta {
-      background: white;
-      border: 1px solid #dedede;
-      border-radius: 16px;
-      padding: 30px;
-      min-height: 230px;
+      background: var(--blanco);
+      border: 3px solid var(--negro);
+      padding: 28px;
+      min-height: 225px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
-      transition: 0.2s;
+      transition: 0.15s;
     }
 
     .tarjeta:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.09);
+      transform: translate(-3px, -3px);
+      box-shadow: 7px 7px 0 var(--dorado);
+    }
+
+    .numero {
+      color: var(--dorado);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 2px;
     }
 
     .tarjeta h3 {
-      margin: 0 0 10px;
-      font-size: 26px;
+      margin: 7px 0 12px;
+      font-size: 28px;
+      text-transform: uppercase;
     }
 
     .tarjeta p {
+      color: #494949;
+      line-height: 1.6;
       margin: 0;
-      color: #5a5a5a;
-      line-height: 1.65;
-      font-size: 16px;
     }
 
-    .tarjeta-enlace {
-      display: inline-block;
-      margin-top: 24px;
-      font-weight: bold;
+    .tarjeta a {
+      margin-top: 25px;
+      font-weight: 900;
+      text-transform: uppercase;
       text-decoration: none;
     }
 
-    .tarjeta-enlace:hover {
-      text-decoration: underline;
+    .tarjeta a:hover {
+      color: #9c7416;
     }
 
+    /* YOUTUBE */
+
     .youtube {
-      margin-top: 38px;
-      border-radius: 18px;
-      padding: 38px;
-      background: white;
-      border: 1px solid #dedede;
+      margin-top: 50px;
+      background: var(--negro);
+      color: white;
+      border: 5px solid var(--dorado);
+      padding: 40px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 30px;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
     }
 
     .youtube h2 {
       margin: 0 0 10px;
-      font-size: 30px;
+      color: var(--dorado-claro);
+      font-size: 31px;
+      text-transform: uppercase;
     }
 
     .youtube p {
       margin: 0;
-      color: #5a5a5a;
+      color: #dddddd;
       line-height: 1.6;
     }
 
+    /* PIE */
+
     footer {
-      border-top: 1px solid #d8d8d8;
-      background: #ededed;
-      padding: 34px 20px;
+      background: var(--negro);
+      color: #aaaaaa;
       text-align: center;
-      color: #666;
-      font-size: 14px;
+      padding: 35px 20px;
+      border-top: 5px solid var(--dorado);
+    }
+
+    .footer-nombre {
+      color: var(--dorado-claro);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     @media (max-width: 800px) {
@@ -326,43 +364,40 @@
         justify-content: center;
       }
 
-      .hero {
-        min-height: auto;
-        padding: 60px 20px;
-      }
-
       .grid {
         grid-template-columns: 1fr;
-      }
-
-      .introduccion {
-        padding: 30px;
       }
 
       .youtube {
         flex-direction: column;
         align-items: flex-start;
-        padding: 30px;
       }
     }
 
     @media (max-width: 520px) {
-      .nav-enlaces a {
-        font-size: 13px;
-        padding: 6px 7px;
+      .hero {
+        padding-top: 45px;
       }
 
-      .subtitulo {
-        font-size: 18px;
+      h1 {
+        letter-spacing: -2px;
       }
 
-      .introduccion h2,
-      .titulo-seccion {
+      .documento {
+        padding: 30px 22px;
+        box-shadow: 5px 5px 0 var(--dorado);
+      }
+
+      .seccion-titulo {
         font-size: 29px;
       }
 
       .tarjeta {
-        padding: 24px;
+        padding: 23px;
+      }
+
+      .youtube {
+        padding: 28px 22px;
       }
     }
   </style>
@@ -371,9 +406,10 @@
 <body>
 
   <nav>
+
     <div class="nav-contenido">
 
-      <a class="nav-marca" href="./">
+      <a class="marca" href="./">
         Asociación Capipana
       </a>
 
@@ -386,51 +422,54 @@
       </div>
 
     </div>
+
   </nav>
 
   <header class="hero">
 
-    <div class="hero-contenido">
+    <img
+      src="imagenes/logo-asociacion-capipana.png"
+      alt="Logo oficial de la Asociación Capipana"
+      class="logo"
+    >
 
-      <img
-        src="imagenes/logo-asociacion-capipana.png"
-        alt="Logo oficial de la Asociación Capipana"
-        class="logo"
+    <br>
+
+    <div class="sello">
+      Sitio oficial
+    </div>
+
+    <h1>
+      Asociación<br>
+      Capipana
+    </h1>
+
+    <p class="hero-subtitulo">
+      Misiones, proyectos, propaganda y decisiones de enorme importancia
+      para el futuro de la Asociación.
+    </p>
+
+    <p class="hero-frase">
+      Reconocimiento. Influencia. Capipana.
+    </p>
+
+    <div class="hero-botones">
+
+      <a
+        href="episodios/"
+        class="boton boton-dorado"
       >
+        Ver episodios
+      </a>
 
-      <div class="etiqueta">
-        Sitio oficial
-      </div>
-
-      <h1>
-        Asociación<br>
-        Capipana
-      </h1>
-
-      <p class="subtitulo">
-        Comedia satírica sobre las misiones, proyectos y campañas
-        de la Asociación Capipana.
-      </p>
-
-      <div class="hero-botones">
-
-        <a
-          href="episodios/"
-          class="boton boton-principal"
-        >
-          Ver episodios
-        </a>
-
-        <a
-          href="https://www.youtube.com/@Asociacioncapipana"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="boton boton-secundario"
-        >
-          Canal de YouTube
-        </a>
-
-      </div>
+      <a
+        href="https://www.youtube.com/@Asociacioncapipana"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="boton boton-negro"
+      >
+        Canal oficial
+      </a>
 
     </div>
 
@@ -438,7 +477,7 @@
 
   <main>
 
-    <section class="introduccion">
+    <section class="documento">
 
       <h2>¿Qué es la Asociación Capipana?</h2>
 
@@ -454,8 +493,8 @@
 
     </section>
 
-    <h2 class="titulo-seccion">
-      Explora la Asociación
+    <h2 class="seccion-titulo">
+      Archivo de la Asociación
     </h2>
 
     <div class="grid">
@@ -463,19 +502,18 @@
       <article class="tarjeta">
 
         <div>
+          <span class="numero">01 / OPERACIONES</span>
+
           <h3>Episodios</h3>
 
           <p>
-            Mira los episodios oficiales y conoce los diferentes proyectos
-            y misiones de la Asociación Capipana.
+            Los proyectos y misiones oficiales llevados adelante por
+            la Asociación Capipana.
           </p>
         </div>
 
-        <a
-          class="tarjeta-enlace"
-          href="episodios/"
-        >
-          Ver episodios →
+        <a href="episodios/">
+          Consultar episodios →
         </a>
 
       </article>
@@ -483,19 +521,18 @@
       <article class="tarjeta">
 
         <div>
+          <span class="numero">02 / PERSONAL</span>
+
           <h3>Miembros</h3>
 
           <p>
-            Conoce a Valentino, Leche y Camila, los tres integrantes
-            de la Asociación Capipana.
+            Valentino, Leche y Camila. Los tres integrantes de la
+            Asociación Capipana.
           </p>
         </div>
 
-        <a
-          class="tarjeta-enlace"
-          href="miembros/"
-        >
-          Ver miembros →
+        <a href="miembros/">
+          Consultar miembros →
         </a>
 
       </article>
@@ -503,19 +540,18 @@
       <article class="tarjeta">
 
         <div>
+          <span class="numero">03 / COMUNICADOS</span>
+
           <h3>Noticias</h3>
 
           <p>
-            Novedades, anuncios, estrenos y actualizaciones oficiales
-            relacionadas con la Asociación Capipana.
+            Novedades, anuncios y comunicaciones oficiales de la
+            Asociación Capipana.
           </p>
         </div>
 
-        <a
-          class="tarjeta-enlace"
-          href="noticias/"
-        >
-          Ver noticias →
+        <a href="noticias/">
+          Leer comunicados →
         </a>
 
       </article>
@@ -523,19 +559,18 @@
       <article class="tarjeta">
 
         <div>
+          <span class="numero">04 / INFORMACIÓN</span>
+
           <h3>Acerca de</h3>
 
           <p>
-            Conoce más sobre la serie, el objetivo de la Asociación,
-            sus proyectos y sus creadores.
+            Información sobre la Asociación, la serie, sus objetivos
+            y sus creadores.
           </p>
         </div>
 
-        <a
-          class="tarjeta-enlace"
-          href="acerca-de/"
-        >
-          Leer más →
+        <a href="acerca-de/">
+          Acceder al informe →
         </a>
 
       </article>
@@ -543,19 +578,18 @@
       <article class="tarjeta">
 
         <div>
-          <h3>Archivo de imágenes</h3>
+          <span class="numero">05 / ARCHIVO VISUAL</span>
+
+          <h3>Imágenes</h3>
 
           <p>
-            Fotografías, propaganda, rodaje, miniaturas y material visual
-            oficial de la Asociación Capipana.
+            Fotografías, propaganda, miniaturas, material de rodaje
+            y documentos visuales oficiales.
           </p>
         </div>
 
-        <a
-          class="tarjeta-enlace"
-          href="imagenes/"
-        >
-          Explorar imágenes →
+        <a href="imagenes/">
+          Abrir archivo →
         </a>
 
       </article>
@@ -563,19 +597,18 @@
       <article class="tarjeta">
 
         <div>
+          <span class="numero">06 / PROYECTO NACIONAL</span>
+
           <h3>Capipalandia</h3>
 
           <p>
-            Conoce uno de los proyectos de la Asociación Capipana:
-            la creación de su propio país.
+            El proyecto mediante el cual la Asociación Capipana decidió
+            fundar su propio país.
           </p>
         </div>
 
-        <a
-          class="tarjeta-enlace"
-          href="episodios/"
-        >
-          Ver Capipalandia →
+        <a href="episodios/">
+          Consultar Capipalandia →
         </a>
 
       </article>
@@ -585,18 +618,21 @@
     <section class="youtube">
 
       <div>
-        <h2>Canal oficial de YouTube</h2>
+
+        <h2>Transmisiones oficiales</h2>
 
         <p>
-          Mira los episodios y videos oficiales de la Asociación Capipana.
+          Episodios y videos publicados por la Asociación Capipana
+          en su canal oficial de YouTube.
         </p>
+
       </div>
 
       <a
         href="https://www.youtube.com/@Asociacioncapipana"
         target="_blank"
         rel="noopener noreferrer"
-        class="boton boton-principal"
+        class="boton boton-dorado"
       >
         Ir a YouTube →
       </a>
@@ -606,7 +642,15 @@
   </main>
 
   <footer>
-    Asociación Capipana © 2026
+
+    <span class="footer-nombre">
+      Asociación Capipana
+    </span>
+
+    <br><br>
+
+    © 2026 — Sitio oficial
+
   </footer>
 
 </body>
