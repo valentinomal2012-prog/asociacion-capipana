@@ -40,94 +40,329 @@
   </script>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f5f5;
-      color: #222;
-    }
-
-    nav {
-      background: #222;
-      padding: 15px 20px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-      display: inline-block;
-      padding: 5px 0;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    header {
-      background: white;
-      padding: 60px 20px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .logo {
-      width: 220px;
-      max-width: 70%;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin: 0 0 10px;
-    }
-
-    .subtitulo {
-      font-size: 20px;
-      color: #555;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.5;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    section {
-      background: white;
-      padding: 30px;
-      margin-bottom: 25px;
-      border-radius: 12px;
-    }
-
-    h2 {
-      margin-top: 0;
-      font-size: 28px;
-    }
-
-    p {
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, #ffffff 0%, #f4f4f4 45%, #ededed 100%);
+      color: #202020;
     }
 
     a {
-      color: #222;
+      color: inherit;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(20, 20, 20, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #333;
+    }
+
+    .nav-contenido {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .nav-marca {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
+      white-space: nowrap;
+    }
+
+    .nav-enlaces {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav-enlaces a {
+      color: #e9e9e9;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+
+    .nav-enlaces a:hover {
+      background: #333;
+      color: white;
+    }
+
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 20px;
+      text-align: center;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(245, 245, 245, 0.96)
+        );
+      border-bottom: 1px solid #ddd;
+    }
+
+    .hero-contenido {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      width: 245px;
+      max-width: 70vw;
+      height: auto;
+      display: block;
+      margin: 0 auto 28px;
+      filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
+    }
+
+    .etiqueta {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 7px 13px;
+      border: 1px solid #d0d0d0;
+      border-radius: 999px;
+      background: white;
+      color: #555;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(44px, 8vw, 78px);
+      letter-spacing: -2px;
+      line-height: 0.98;
+    }
+
+    .subtitulo {
+      max-width: 760px;
+      margin: 24px auto 0;
+      color: #555;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .hero-botones {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .boton-principal {
+      background: #202020;
+      color: white;
+    }
+
+    .boton-principal:hover {
+      background: #000;
+      transform: translateY(-2px);
+    }
+
+    .boton-secundario {
+      background: white;
+      color: #202020;
+      border: 1px solid #ccc;
+    }
+
+    .boton-secundario:hover {
+      border-color: #888;
+      transform: translateY(-2px);
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 55px 20px 70px;
+    }
+
+    .introduccion {
+      background: #202020;
+      color: white;
+      border-radius: 18px;
+      padding: 42px;
+      margin-bottom: 38px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .introduccion h2 {
+      margin-top: 0;
+      font-size: 34px;
+    }
+
+    .introduccion p {
+      max-width: 850px;
+      color: #dedede;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .titulo-seccion {
+      margin: 0 0 24px;
+      font-size: 34px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .tarjeta {
+      background: white;
+      border: 1px solid #dedede;
+      border-radius: 16px;
+      padding: 30px;
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+      transition: 0.2s;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.09);
+    }
+
+    .tarjeta h3 {
+      margin: 0 0 10px;
+      font-size: 26px;
+    }
+
+    .tarjeta p {
+      margin: 0;
+      color: #5a5a5a;
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    .tarjeta-enlace {
+      display: inline-block;
+      margin-top: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .tarjeta-enlace:hover {
+      text-decoration: underline;
+    }
+
+    .youtube {
+      margin-top: 38px;
+      border-radius: 18px;
+      padding: 38px;
+      background: white;
+      border: 1px solid #dedede;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+    }
+
+    .youtube h2 {
+      margin: 0 0 10px;
+      font-size: 30px;
+    }
+
+    .youtube p {
+      margin: 0;
+      color: #5a5a5a;
+      line-height: 1.6;
     }
 
     footer {
+      border-top: 1px solid #d8d8d8;
+      background: #ededed;
+      padding: 34px 20px;
       text-align: center;
-      padding: 30px;
       color: #666;
+      font-size: 14px;
     }
 
-    @media (max-width: 700px) {
-      nav a {
-        margin: 5px 8px;
+    @media (max-width: 800px) {
+      .nav-contenido {
+        flex-direction: column;
+      }
+
+      .nav-enlaces {
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 60px 20px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .introduccion {
+        padding: 30px;
+      }
+
+      .youtube {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav-enlaces a {
+        font-size: 13px;
+        padding: 6px 7px;
+      }
+
+      .subtitulo {
+        font-size: 18px;
+      }
+
+      .introduccion h2,
+      .titulo-seccion {
+        font-size: 29px;
+      }
+
+      .tarjeta {
+        padding: 24px;
       }
     }
   </style>
@@ -136,41 +371,74 @@
 <body>
 
   <nav>
-    <a href="./">Inicio</a>
-    <a href="episodios/">Episodios</a>
-    <a href="miembros/">Miembros</a>
-    <a href="noticias/">Noticias</a>
-    <a href="acerca-de/">Acerca de</a>
-    <a href="imagenes/">Imágenes</a>
-    <a
-      href="https://www.youtube.com/@Asociacioncapipana"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      YouTube
-    </a>
+    <div class="nav-contenido">
+
+      <a class="nav-marca" href="./">
+        Asociación Capipana
+      </a>
+
+      <div class="nav-enlaces">
+        <a href="episodios/">Episodios</a>
+        <a href="miembros/">Miembros</a>
+        <a href="noticias/">Noticias</a>
+        <a href="acerca-de/">Acerca de</a>
+        <a href="imagenes/">Imágenes</a>
+      </div>
+
+    </div>
   </nav>
 
-  <header>
+  <header class="hero">
 
-    <img
-      src="imagenes/logo-asociacion-capipana.png"
-      alt="Logo oficial de la Asociación Capipana"
-      class="logo"
-    >
+    <div class="hero-contenido">
 
-    <h1>Asociación Capipana</h1>
+      <img
+        src="imagenes/logo-asociacion-capipana.png"
+        alt="Logo oficial de la Asociación Capipana"
+        class="logo"
+      >
 
-    <p class="subtitulo">
-      Sitio oficial de la Asociación Capipana.
-      Episodios, miembros, noticias, imágenes, propaganda y material oficial.
-    </p>
+      <div class="etiqueta">
+        Sitio oficial
+      </div>
+
+      <h1>
+        Asociación<br>
+        Capipana
+      </h1>
+
+      <p class="subtitulo">
+        Comedia satírica sobre las misiones, proyectos y campañas
+        de la Asociación Capipana.
+      </p>
+
+      <div class="hero-botones">
+
+        <a
+          href="episodios/"
+          class="boton boton-principal"
+        >
+          Ver episodios
+        </a>
+
+        <a
+          href="https://www.youtube.com/@Asociacioncapipana"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="boton boton-secundario"
+        >
+          Canal de YouTube
+        </a>
+
+      </div>
+
+    </div>
 
   </header>
 
   <main>
 
-    <section>
+    <section class="introduccion">
 
       <h2>¿Qué es la Asociación Capipana?</h2>
 
@@ -186,99 +454,152 @@
 
     </section>
 
-    <section>
+    <h2 class="titulo-seccion">
+      Explora la Asociación
+    </h2>
 
-      <h2>Episodios</h2>
+    <div class="grid">
 
-      <p>
-        Mira los episodios oficiales de la Asociación Capipana y conoce
-        los distintos proyectos y misiones de la organización.
-      </p>
+      <article class="tarjeta">
 
-      <p>
-        <a href="episodios/">Ver episodios →</a>
-      </p>
+        <div>
+          <h3>Episodios</h3>
 
-    </section>
+          <p>
+            Mira los episodios oficiales y conoce los diferentes proyectos
+            y misiones de la Asociación Capipana.
+          </p>
+        </div>
 
-    <section>
-
-      <h2>Miembros</h2>
-
-      <p>
-        Conoce a Valentino, Leche y Camila, los tres integrantes
-        de la Asociación Capipana.
-      </p>
-
-      <p>
-        <a href="miembros/">Ver miembros →</a>
-      </p>
-
-    </section>
-
-    <section>
-
-      <h2>Noticias</h2>
-
-      <p>
-        Lee las últimas novedades, anuncios y actualizaciones oficiales
-        de la Asociación Capipana.
-      </p>
-
-      <p>
-        <a href="noticias/">Ver noticias →</a>
-      </p>
-
-    </section>
-
-    <section>
-
-      <h2>Acerca de</h2>
-
-      <p>
-        Conoce más sobre la Asociación Capipana, la serie, sus proyectos
-        y sus creadores.
-      </p>
-
-      <p>
-        <a href="acerca-de/">Leer más →</a>
-      </p>
-
-    </section>
-
-    <section>
-
-      <h2>Canal oficial de YouTube</h2>
-
-      <p>
-        Mira los episodios y videos oficiales de la Asociación Capipana
-        en nuestro canal de YouTube.
-      </p>
-
-      <p>
         <a
-          href="https://www.youtube.com/@Asociacioncapipana"
-          target="_blank"
-          rel="noopener noreferrer"
+          class="tarjeta-enlace"
+          href="episodios/"
         >
-          Ver canal oficial de YouTube →
+          Ver episodios →
         </a>
-      </p>
 
-    </section>
+      </article>
 
-    <section>
+      <article class="tarjeta">
 
-      <h2>Archivo oficial</h2>
+        <div>
+          <h3>Miembros</h3>
 
-      <p>
-        Explora fotografías, personajes, logos, propaganda, rodaje y demás
-        material visual de la Asociación Capipana.
-      </p>
+          <p>
+            Conoce a Valentino, Leche y Camila, los tres integrantes
+            de la Asociación Capipana.
+          </p>
+        </div>
 
-      <p>
-        <a href="imagenes/">Ver archivo de imágenes →</a>
-      </p>
+        <a
+          class="tarjeta-enlace"
+          href="miembros/"
+        >
+          Ver miembros →
+        </a>
+
+      </article>
+
+      <article class="tarjeta">
+
+        <div>
+          <h3>Noticias</h3>
+
+          <p>
+            Novedades, anuncios, estrenos y actualizaciones oficiales
+            relacionadas con la Asociación Capipana.
+          </p>
+        </div>
+
+        <a
+          class="tarjeta-enlace"
+          href="noticias/"
+        >
+          Ver noticias →
+        </a>
+
+      </article>
+
+      <article class="tarjeta">
+
+        <div>
+          <h3>Acerca de</h3>
+
+          <p>
+            Conoce más sobre la serie, el objetivo de la Asociación,
+            sus proyectos y sus creadores.
+          </p>
+        </div>
+
+        <a
+          class="tarjeta-enlace"
+          href="acerca-de/"
+        >
+          Leer más →
+        </a>
+
+      </article>
+
+      <article class="tarjeta">
+
+        <div>
+          <h3>Archivo de imágenes</h3>
+
+          <p>
+            Fotografías, propaganda, rodaje, miniaturas y material visual
+            oficial de la Asociación Capipana.
+          </p>
+        </div>
+
+        <a
+          class="tarjeta-enlace"
+          href="imagenes/"
+        >
+          Explorar imágenes →
+        </a>
+
+      </article>
+
+      <article class="tarjeta">
+
+        <div>
+          <h3>Capipalandia</h3>
+
+          <p>
+            Conoce uno de los proyectos de la Asociación Capipana:
+            la creación de su propio país.
+          </p>
+        </div>
+
+        <a
+          class="tarjeta-enlace"
+          href="episodios/"
+        >
+          Ver Capipalandia →
+        </a>
+
+      </article>
+
+    </div>
+
+    <section class="youtube">
+
+      <div>
+        <h2>Canal oficial de YouTube</h2>
+
+        <p>
+          Mira los episodios y videos oficiales de la Asociación Capipana.
+        </p>
+      </div>
+
+      <a
+        href="https://www.youtube.com/@Asociacioncapipana"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="boton boton-principal"
+      >
+        Ir a YouTube →
+      </a>
 
     </section>
 
