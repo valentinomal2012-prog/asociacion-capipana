@@ -14,6 +14,38 @@
   </url>
 
   <url>
+    <loc>https://valentinomal2012-prog.github.io/asociacion-capipana/episodios/</loc>
+
+    <image:image>
+      <image:loc>https://valentinomal2012-prog.github.io/asociacion-capipana/imagenes/miniatura-capipalandia-asociacion-capipana.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://valentinomal2012-prog.github.io/asociacion-capipana/miembros/</loc>
+
+    <image:image>
+      <image:loc>https://valentinomal2012-prog.github.io/asociacion-capipana/imagenes/valentino-retrato.png</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://valentinomal2012-prog.github.io/asociacion-capipana/imagenes/leche-individual.jpg</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://valentinomal2012-prog.github.io/asociacion-capipana/imagenes/Camila-individual.jpg</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://valentinomal2012-prog.github.io/asociacion-capipana/noticias/</loc>
+  </url>
+
+  <url>
+    <loc>https://valentinomal2012-prog.github.io/asociacion-capipana/acerca-de/</loc>
+  </url>
+
+  <url>
     <loc>https://valentinomal2012-prog.github.io/asociacion-capipana/imagenes/</loc>
 
     <image:image>
