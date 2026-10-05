@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Asociación Capipana | Sitio oficial</title>
+  <title>Imágenes oficiales | Asociación Capipana</title>
 
   <meta
     name="description"
-    content="Sitio oficial de la Asociación Capipana, serie de comedia satírica creada por Valentino Malufi y Camila Risso. Episodios, personajes, imágenes, propaganda y material oficial."
+    content="Archivo de imágenes oficiales de la Asociación Capipana. Fotografías de Valentino, Camila y Leche, material de Capipalandia, propaganda, miniaturas y material oficial de la serie."
   >
 
   <style>
@@ -21,71 +21,74 @@
 
     header {
       background: white;
-      padding: 60px 20px;
       text-align: center;
+      padding: 50px 20px;
       border-bottom: 1px solid #ddd;
     }
 
-    .logo {
-      width: 220px;
-      max-width: 70%;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
     h1 {
-      font-size: 42px;
       margin: 0 0 10px;
+      font-size: 38px;
     }
 
-    .subtitulo {
-      font-size: 20px;
+    header p {
       color: #555;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.5;
+      font-size: 18px;
     }
 
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    section {
-      background: white;
-      padding: 30px;
+    .volver {
       margin-bottom: 25px;
+    }
+
+    a {
+      color: #222;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .imagen {
+      background: white;
+      padding: 25px;
       border-radius: 12px;
     }
 
-    h2 {
-      margin-top: 0;
-      font-size: 28px;
-    }
-
-    h3 {
-      font-size: 22px;
-      margin-bottom: 15px;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    .imagen-oficial {
+    .imagen img {
       width: 100%;
-      max-width: 520px;
       height: auto;
       display: block;
       margin: 20px auto;
-      border-radius: 12px;
+      border-radius: 10px;
+    }
+
+    .imagen h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .imagen p {
+      line-height: 1.6;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 35px;
       color: #666;
+    }
+
+    @media (max-width: 700px) {
+      .galeria {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -93,54 +96,103 @@
 <body>
 
   <header>
+    <h1>Archivo de imágenes</h1>
 
-    <img
-      src="imagenes/logo-asociacion-capipana.png"
-      alt="Logo oficial de la Asociación Capipana"
-      class="logo"
-    >
-
-    <h1>Asociación Capipana</h1>
-
-    <p class="subtitulo">
-      Sitio oficial de la Asociación Capipana.
-      Episodios, personajes, imágenes, propaganda y material oficial.
+    <p>
+      Fotografías, propaganda y material oficial de la Asociación Capipana.
     </p>
-
   </header>
 
   <main>
 
-    <section>
+    <p class="volver">
+      <a href="../">← Volver al sitio oficial</a>
+    </p>
 
-      <h2>¿Qué es la Asociación Capipana?</h2>
+    <div class="galeria">
 
-      <p>
-        La Asociación Capipana es una serie de comedia satírica creada por
-        Valentino Malufi y Camila Risso.
-      </p>
+      <article class="imagen">
 
-      <p>
-        La Asociación busca crecer, ganar reconocimiento y aumentar su
-        influencia mediante proyectos, misiones y propaganda.
-      </p>
+        <h2>Valentino y Camila — Asociación Capipana</h2>
 
-    </section>
+        <img
+          src="valentino-camila.jpg"
+          alt="Valentino y Camila de la Asociación Capipana"
+        >
 
-    <section>
+        <p>
+          Fotografía oficial de Valentino y Camila, integrantes de la
+          Asociación Capipana. La imagen también se utiliza como fotografía
+          de perfil del canal oficial de YouTube.
+        </p>
 
-      <h2>Archivo oficial</h2>
+      </article>
 
-      <p>
-        Explora fotografías, personajes, logos, propaganda y demás material
-        visual de la Asociación Capipana.
-      </p>
+      <article class="imagen">
 
-      <p>
-        <a href="imagenes/">Ver archivo de imágenes →</a>
-      </p>
+        <h2>Valentino y Leche — Asociación Capipana</h2>
 
-    </section>
+        <img
+          src="valentino-leche-asociacion-capipana.jpg"
+          alt="Valentino junto a Leche de la Asociación Capipana"
+        >
+
+        <p>
+          Fotografía de Valentino junto a Leche, miembro de la Asociación
+          Capipana y compañero habitual de las misiones de la organización.
+        </p>
+
+      </article>
+
+      <article class="imagen">
+
+        <h2>Bandera de Capipalandia</h2>
+
+        <img
+          src="bandera-capipalandia.png"
+          alt="Bandera oficial de Capipalandia de la Asociación Capipana"
+        >
+
+        <p>
+          Bandera de Capipalandia, el país fundado por la Asociación Capipana
+          durante el proyecto Capipalandia.
+        </p>
+
+      </article>
+
+      <article class="imagen">
+
+        <h2>Propaganda de Capipalandia</h2>
+
+        <img
+          src="propaganda-capipalandia-valentino.jpeg"
+          alt="Propaganda de Capipalandia con Valentino de la Asociación Capipana"
+        >
+
+        <p>
+          Pieza de propaganda de Capipalandia protagonizada por Valentino,
+          creada como parte de la campaña promocional del país.
+        </p>
+
+      </article>
+
+      <article class="imagen">
+
+        <h2>Capipalandia — Miniatura oficial</h2>
+
+        <img
+          src="miniatura-capipalandia-asociacion-capipana.png"
+          alt="Miniatura del episodio Capipalandia de la Asociación Capipana"
+        >
+
+        <p>
+          Miniatura oficial del episodio de la Asociación Capipana dedicado
+          a la fundación de Capipalandia.
+        </p>
+
+      </article>
+
+    </div>
 
   </main>
 
