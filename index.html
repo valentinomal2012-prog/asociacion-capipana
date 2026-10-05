@@ -47,6 +47,25 @@
       color: #222;
     }
 
+    nav {
+      background: #222;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      display: inline-block;
+      padding: 5px 0;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     header {
       background: white;
       padding: 60px 20px;
@@ -105,10 +124,32 @@
       padding: 30px;
       color: #666;
     }
+
+    @media (max-width: 700px) {
+      nav a {
+        margin: 5px 8px;
+      }
+    }
   </style>
 </head>
 
 <body>
+
+  <nav>
+    <a href="./">Inicio</a>
+    <a href="episodios/">Episodios</a>
+    <a href="miembros/">Miembros</a>
+    <a href="noticias/">Noticias</a>
+    <a href="acerca-de/">Acerca de</a>
+    <a href="imagenes/">Imágenes</a>
+    <a
+      href="https://www.youtube.com/@Asociacioncapipana"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      YouTube
+    </a>
+  </nav>
 
   <header>
 
