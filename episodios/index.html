@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Episodios | Asociación Capipana</title>
+  <title>Miembros | Asociación Capipana</title>
 
   <meta
     name="description"
-    content="Episodios oficiales de la Asociación Capipana. Mira capítulos, miniaturas y material relacionado con la serie."
+    content="Conoce a los miembros de la Asociación Capipana: Valentino, Camila y Leche."
   >
 
   <style>
@@ -37,7 +37,7 @@
     }
 
     main {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 40px auto;
       padding: 0 20px;
     }
@@ -50,45 +50,50 @@
       color: #222;
     }
 
-    .episodio {
+    .miembros {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .miembro {
       background: white;
-      padding: 30px;
-      margin-bottom: 30px;
+      padding: 25px;
       border-radius: 12px;
     }
 
-    .episodio img {
+    .miembro img {
       width: 100%;
-      max-width: 700px;
       height: auto;
       display: block;
-      margin: 20px auto;
+      margin: 15px auto 20px;
       border-radius: 10px;
     }
 
-    .episodio h2 {
+    .miembro h2 {
       margin-top: 0;
-      font-size: 28px;
+      font-size: 26px;
     }
 
-    .episodio p {
+    .cargo {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .miembro p {
       line-height: 1.6;
-    }
-
-    .boton {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 18px;
-      background: #222;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
     }
 
     footer {
       text-align: center;
       padding: 35px;
       color: #666;
+    }
+
+    @media (max-width: 850px) {
+      .miembros {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -97,10 +102,10 @@
 
   <header>
 
-    <h1>Episodios</h1>
+    <h1>Miembros</h1>
 
     <p>
-      Episodios y capítulos oficiales de la Asociación Capipana.
+      Los integrantes de la Asociación Capipana.
     </p>
 
   </header>
@@ -111,36 +116,86 @@
       <a href="../">← Volver al sitio oficial</a>
     </p>
 
-    <article class="episodio">
+    <div class="miembros">
 
-      <h2>Capipalandia</h2>
+      <article class="miembro">
 
-      <img
-        src="../imagenes/miniatura-capipalandia-asociacion-capipana.png"
-        alt="Miniatura del episodio Capipalandia de la Asociación Capipana"
-      >
+        <h2>Valentino</h2>
 
-      <p>
-        La Asociación Capipana decide fundar su propio país:
-        Capipalandia.
-      </p>
+        <img
+          src="../imagenes/valentino-retrato.png"
+          alt="Valentino, líder de la Asociación Capipana"
+        >
 
-      <p>
-        Valentino, Camila y Leche se embarcan en un proyecto que incluye
-        gobierno, bandera, discursos, propaganda y todo lo necesario para
-        intentar convertir a Capipalandia en una nación de verdad.
-      </p>
+        <p class="cargo">
+          Fundador y líder
+        </p>
 
-      <a
-        class="boton"
-        href="https://youtu.be/3IauV6mjKVg?si=MDWM-_jbJPQE26dP"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Ver Capipalandia en YouTube →
-      </a>
+        <p>
+          Valentino es el fundador y líder de la Asociación Capipana.
+          Es megalómano, carismático y entusiasta, y es quien decide
+          las misiones y proyectos de la organización.
+        </p>
 
-    </article>
+        <p>
+          Participa personalmente en las misiones y diseña gran parte
+          de la propaganda y el material público de la Asociación.
+        </p>
+
+      </article>
+
+      <article class="miembro">
+
+        <h2>Leche</h2>
+
+        <img
+          src="../imagenes/valentino-leche-final.jpg"
+          alt="Leche, miembro de la Asociación Capipana"
+        >
+
+        <p class="cargo">
+          Miembro de la Asociación Capipana
+        </p>
+
+        <p>
+          Leche es un cartón de leche con telequinesis y uno de los miembros
+          de la Asociación Capipana.
+        </p>
+
+        <p>
+          Suele acompañar a Valentino y Camila en las misiones y participa
+          activamente en los proyectos de la organización.
+        </p>
+
+      </article>
+
+      <article class="miembro">
+
+        <h2>Camila</h2>
+
+        <img
+          src="../imagenes/camila-individual.jpg"
+          alt="Camila, miembro de la Asociación Capipana"
+        >
+
+        <p class="cargo">
+          Miembro de la Asociación Capipana
+        </p>
+
+        <p>
+          Camila es la voz de la razón del grupo y cumple principalmente
+          una función de apoyo y ejecución dentro de la Asociación.
+        </p>
+
+        <p>
+          Ayuda a llevar adelante los proyectos de Valentino, prepara
+          materiales, participa en campañas y suele señalar los problemas
+          de sus planes antes de acompañarlo igualmente.
+        </p>
+
+      </article>
+
+    </div>
 
   </main>
 
