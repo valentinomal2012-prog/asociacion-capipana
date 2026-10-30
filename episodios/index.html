@@ -76,6 +76,29 @@
       line-height: 1.6;
     }
 
+    .miniatura-enlace {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .miniatura-enlace img {
+      margin: 0;
+      transition: transform 0.2s;
+    }
+
+    .miniatura-enlace:hover img {
+      transform: scale(1.025);
+    }
+
+    .miniatura-enlace:focus-visible {
+      outline: 3px solid #222;
+      outline-offset: 4px;
+    }
+
     .estado {
       display: inline-block;
       padding: 8px 13px;
@@ -140,7 +163,7 @@
     <h1>Episodios</h1>
 
     <p>
-      Episodios, proyectos y próximos estrenos
+      Episodios y próximos estrenos
       de la Asociación Capipana.
     </p>
   </header>
@@ -151,24 +174,30 @@
       <a href="../">← Volver al sitio oficial</a>
     </p>
 
+    <!-- EPISODIOS ESTRENADOS -->
+
     <h2 class="seccion-titulo">
-      Próximos estrenos
+      Episodios estrenados
     </h2>
 
     <!-- CAPIPALANDIA -->
 
     <article class="episodio">
 
-      <span class="estado">
-        Próximamente
-      </span>
-
       <h2>Capipalandia</h2>
 
-      <img
-        src="../imagenes/miniatura-capipalandia-asociacion-capipana.png"
-        alt="Miniatura oficial de Capipalandia"
+      <a
+        class="miniatura-enlace"
+        href="https://www.youtube.com/watch?v=3IauV6mjKVg"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ver Capipalandia en YouTube"
       >
+        <img
+          src="../imagenes/miniatura-capipalandia-asociacion-capipana.png"
+          alt="Miniatura oficial de Capipalandia"
+        >
+      </a>
 
       <p>
         Una idea tan ambiciosa como inesperada lleva
@@ -191,7 +220,22 @@
         convertir su sueño nacional en realidad?
       </p>
 
+      <a
+        class="boton"
+        href="https://www.youtube.com/watch?v=3IauV6mjKVg"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ver Capipalandia en YouTube →
+      </a>
+
     </article>
+
+    <!-- PRÓXIMOS ESTRENOS -->
+
+    <h2 class="seccion-titulo">
+      Próximos estrenos
+    </h2>
 
     <!-- RELIGIÓN CAPIPANA -->
 
