@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -113,6 +114,8 @@
       color: var(--negro);
     }
 
+    /* PORTADA */
+
     .hero {
       background: white;
       text-align: center;
@@ -190,6 +193,8 @@
       background: #ededed;
     }
 
+    /* CONTENIDO */
+
     main {
       max-width: 1150px;
       margin: 0 auto;
@@ -237,6 +242,8 @@
       font-size: 34px;
       text-transform: uppercase;
     }
+
+    /* TARJETAS */
 
     .grid {
       display: grid;
@@ -290,6 +297,8 @@
       text-decoration: underline;
     }
 
+    /* YOUTUBE */
+
     .youtube {
       margin-top: 50px;
       background: var(--negro);
@@ -313,6 +322,8 @@
       color: #d8d8d8;
       line-height: 1.6;
     }
+
+    /* PIE DE PÁGINA */
 
     footer {
       background: white;
@@ -359,6 +370,8 @@
     .redes a:hover {
       text-decoration: underline;
     }
+
+    /* CELULARES */
 
     @media (max-width: 800px) {
       .nav-contenido {
@@ -410,8 +423,9 @@
 
 <body>
 
-  <nav>
+  <!-- NAVEGACIÓN -->
 
+  <nav>
     <div class="nav-contenido">
 
       <a class="marca" href="./">
@@ -427,8 +441,9 @@
       </div>
 
     </div>
-
   </nav>
+
+  <!-- PORTADA -->
 
   <header class="hero">
 
@@ -450,16 +465,13 @@
     </h1>
 
     <p class="hero-subtitulo">
-      Misiones, proyectos, propaganda y decisiones de enorme importancia
-      para el futuro de la Asociación.
+      Misiones, proyectos, propaganda y decisiones de enorme
+      importancia para el futuro de la Asociación.
     </p>
 
     <div class="hero-botones">
 
-      <a
-        href="episodios/"
-        class="boton boton-negro"
-      >
+      <a href="episodios/" class="boton boton-negro">
         Ver episodios
       </a>
 
@@ -478,21 +490,26 @@
 
   <main>
 
+    <!-- INFORMACIÓN INSTITUCIONAL -->
+
     <section class="documento">
 
       <h2>¿Qué es la Asociación Capipana?</h2>
 
       <p>
-        La Asociación Capipana es una serie de comedia satírica creada por
-        Valentino Malufi y Camila Risso.
+        La Asociación Capipana es una serie de comedia satírica
+        creada por Valentino Malufi y Camila Risso.
       </p>
 
       <p>
-        La Asociación busca crecer, ganar reconocimiento y aumentar su
-        influencia mediante proyectos, misiones y propaganda.
+        La Asociación busca crecer, ganar reconocimiento y
+        aumentar su influencia mediante proyectos, misiones
+        y propaganda.
       </p>
 
     </section>
+
+    <!-- ARCHIVO -->
 
     <h2 class="seccion-titulo">
       Archivo de la Asociación
@@ -500,13 +517,15 @@
 
     <div class="grid">
 
+      <!-- EPISODIOS -->
+
       <article class="tarjeta">
         <div>
           <span class="numero">01 / OPERACIONES</span>
           <h3>Episodios</h3>
           <p>
-            Los proyectos y misiones oficiales llevados adelante por
-            la Asociación Capipana.
+            Los proyectos y misiones oficiales llevados
+            adelante por la Asociación Capipana.
           </p>
         </div>
 
@@ -515,13 +534,15 @@
         </a>
       </article>
 
+      <!-- MIEMBROS -->
+
       <article class="tarjeta">
         <div>
           <span class="numero">02 / PERSONAL</span>
           <h3>Miembros</h3>
           <p>
-            Valentino, Leche y Camila. Los tres integrantes de la
-            Asociación Capipana.
+            Valentino, Leche y Camila. Los tres integrantes
+            de la Asociación Capipana.
           </p>
         </div>
 
@@ -530,13 +551,15 @@
         </a>
       </article>
 
+      <!-- NOTICIAS -->
+
       <article class="tarjeta">
         <div>
           <span class="numero">03 / COMUNICADOS</span>
           <h3>Noticias</h3>
           <p>
-            Novedades, anuncios y comunicaciones oficiales de la
-            Asociación Capipana.
+            Novedades, anuncios y comunicaciones oficiales
+            de la Asociación Capipana.
           </p>
         </div>
 
@@ -545,13 +568,15 @@
         </a>
       </article>
 
+      <!-- ACERCA DE -->
+
       <article class="tarjeta">
         <div>
           <span class="numero">04 / INFORMACIÓN</span>
           <h3>Acerca de</h3>
           <p>
-            Información sobre la Asociación, la serie, sus objetivos
-            y sus creadores.
+            Información sobre la Asociación, la serie,
+            sus objetivos y sus creadores.
           </p>
         </div>
 
@@ -560,13 +585,15 @@
         </a>
       </article>
 
+      <!-- IMÁGENES -->
+
       <article class="tarjeta">
         <div>
           <span class="numero">05 / ARCHIVO VISUAL</span>
           <h3>Imágenes</h3>
           <p>
-            Fotografías, propaganda, miniaturas, material de rodaje
-            y documentos visuales oficiales.
+            Fotografías, propaganda, miniaturas, material
+            de rodaje y documentos visuales oficiales.
           </p>
         </div>
 
@@ -575,22 +602,9 @@
         </a>
       </article>
 
-      <article class="tarjeta">
-        <div>
-          <span class="numero">06 / PROYECTO NACIONAL</span>
-          <h3>Capipalandia</h3>
-          <p>
-            El proyecto mediante el cual la Asociación Capipana decidió
-            fundar su propio país.
-          </p>
-        </div>
-
-        <a href="episodios/">
-          Consultar Capipalandia →
-        </a>
-      </article>
-
     </div>
+
+    <!-- YOUTUBE -->
 
     <section class="youtube">
 
@@ -598,8 +612,8 @@
         <h2>Transmisiones oficiales</h2>
 
         <p>
-          Episodios y videos publicados por la Asociación Capipana
-          en su canal oficial de YouTube.
+          Episodios y videos publicados por la Asociación
+          Capipana en su canal oficial de YouTube.
         </p>
       </div>
 
@@ -616,6 +630,8 @@
 
   </main>
 
+  <!-- FOOTER -->
+
   <footer>
 
     <span class="footer-nombre">
@@ -623,6 +639,7 @@
     </span>
 
     <div class="redes">
+
       <a
         href="https://www.youtube.com/@Asociacioncapipana"
         target="_blank"
@@ -640,6 +657,7 @@
       >
         TikTok
       </a>
+
     </div>
 
     <div class="contacto">
